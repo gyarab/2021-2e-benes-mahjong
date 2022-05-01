@@ -3,6 +3,7 @@
 Díky Jendo.
 
 #### Instalace
-1. Stáhněte si `mahjong.py`
-2. Spusťte `mahjong.py`
-3. Užijte si hru
+1. Nesmíš se toho bát...
+2. Stáhni ten mahjong.
+3. Spusť ho ale už!
+4. Buď dobrej.
