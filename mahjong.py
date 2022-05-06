@@ -329,7 +329,7 @@ while running:
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 pass
-        elif event.type == pygame.MOUSEBUTTONDOWN: #and event.button == 1:
+        elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             if SCENA == "hra":
                 different_patro_interaction = False
                 for x in range(2):
@@ -337,8 +337,6 @@ while running:
                         if pygame.Rect(x * (TILE_WIDTH + 2) + WIN_X / 2 - (TILE_WIDTH + 2) * 6 + 5 * (TILE_WIDTH + 2) - posun*3, y * (TILE_HEIGHT + 2) + 50 + 3 * (TILE_HEIGHT + 2) - posun*3, TILE_WIDTH + posun*3, TILE_HEIGHT+ posun*3).collidepoint(pygame.mouse.get_pos()):
                             #pokud kliknes mysi na policko
                             if patro4[y][x] != "x":
-                                if event.button == 3:
-                                    patro4[y][x] = "x"
                                 different_patro_interaction = True
                                 if active_position == ():  #jesli neni aktivni
                                     if x == 0 or x == patro4_width - 1: #pokud je odhaleny
@@ -359,8 +357,6 @@ while running:
                             if pygame.Rect(x * (TILE_WIDTH + 2) + WIN_X / 2 - (TILE_WIDTH + 2) * 6 + 4 * (TILE_WIDTH + 2) - posun*2, y * (TILE_HEIGHT + 2) + 50 + 2 * (TILE_HEIGHT + 2) - posun*2, TILE_WIDTH + posun*2, TILE_HEIGHT + posun*2).collidepoint(pygame.mouse.get_pos()):
                                 #pokud kliknes mysi na policko
                                 if patro3[y][x] != "x":
-                                    if event.button == 3:
-                                        patro3[y][x] = "x"
                                     different_patro_interaction = True
                                     if active_position == ():  #jesli neni aktivni
                                         if x == 0 or x == patro3_width - 1 or patro3[y][x - 1] == "x" or patro3[y][x + 1] == "x": #pokud je odhaleny
@@ -381,8 +377,6 @@ while running:
                             if pygame.Rect(x * (TILE_WIDTH + 2) + WIN_X / 2 - (TILE_WIDTH + 2) * 6 + 3 * (TILE_WIDTH + 2) - posun, y * (TILE_HEIGHT + 2) + 50 + 1 * (TILE_HEIGHT + 2)- posun, TILE_WIDTH + posun, TILE_HEIGHT + posun).collidepoint(pygame.mouse.get_pos()):
                                 #pokud kliknes mysi na policko
                                 if patro2[y][x] != "x":
-                                    if event.button == 3:
-                                        patro2[y][x] = "x"
                                     different_patro_interaction = True
                                     if active_position == ():  #jesli neni aktivni
                                         if x == 0 or x == patro2_width - 1 or patro2[y][x - 1] == "x" or patro2[y][x + 1] == "x": #pokud je odhaleny
@@ -403,8 +397,6 @@ while running:
                             if pygame.Rect(x * (TILE_WIDTH + 2) + WIN_X / 2 - (TILE_WIDTH + 2) * 6, y * (TILE_HEIGHT + 2) + 50, TILE_WIDTH, TILE_HEIGHT).collidepoint(pygame.mouse.get_pos()):
                                 #pokud kliknes mysi na policko
                                 if patro1[y][x] != "x":
-                                    if event.button == 3:
-                                        patro1[y][x] = "x"
                                     different_patro_interaction = True
                                     if active_position == ():  #jesli neni aktivni
                                         if x == 0 or x == patro1_width - 1 or patro1[y][x - 1] == "x" or patro1[y][x + 1] == "x": #pokud je odhaleny
